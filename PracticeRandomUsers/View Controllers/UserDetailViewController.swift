@@ -15,19 +15,23 @@ class UserDetailViewController: UIViewController {
 	@IBOutlet weak var phoneNumberLabel: UILabel!
 	@IBOutlet weak var emailLabel: UILabel!
 
-	var user: RandomUser?
+	 var user: RandomUser? {
+			didSet {
+				updateViews()
+			}
+		}
 	var cache: Cache<String, UIImage>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+		updateViews()
     }
     
 	private func updateViews() {
 			guard let cache = cache, let user = user, isViewLoaded else { return }
 
-			if let image = cache.fetch(key: "large\(user.id.value)") {
+			if let image = cache.fetch(key: "\(user.picture.large)") {
 				userImageView.image = image
 			} else {
 				guard let imageURL = URL(string: user.picture.large) else { return }
@@ -49,27 +53,17 @@ class UserDetailViewController: UIViewController {
 						self.userImageView.image = image
 
 						if let image = image {
-							self.cache?.imageDict["large\(user.id.value)"] = image
+							self.cache?.imageDict["\(user.picture.large)"] = image
 						}
 					}
 				}.resume()
 			}
 
-			title = "\(user.name.title.uppercased()). \(user.name.last.uppercased())"
-			nameLabel.text = "\(user.name.title.uppercased()). \(user.name.first.uppercased()) \(user.name.last.uppercased())"
+			title = "\(user.name.title.uppercased()). \(user.name.last.capitalized)"
+			nameLabel.text = "\(user.name.title.uppercased()). \(user.name.first.capitalized) \(user.name.last.capitalized)"
 			phoneNumberLabel.text = "Cell: \(user.cell)\nPhone: \(user.phone)"
 			emailLabel.text = "\(user.email)"
 		}
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

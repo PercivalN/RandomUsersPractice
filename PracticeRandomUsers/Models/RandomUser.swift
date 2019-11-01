@@ -15,7 +15,6 @@ struct UsersList: Codable {
 struct RandomUser: Codable {
 	let name: Name
 	let email: String
-	let id: ID
 	let phone: String
 	let cell: String
 	let picture: Pictures
@@ -33,7 +32,4 @@ struct Pictures: Codable {
 	let thumbnail: String
 }
 
-struct ID: Codable {
-	let name: String
-	let value: String
-}
+

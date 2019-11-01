@@ -18,8 +18,8 @@ class RandomUserController {
 						completion: @escaping ([RandomUser]?, Error?) -> Void) {
 
 		let url = self.url(forAmountOfResults: 1000)
-		fetch(from: url, using: session) { (dictionary: [String : UsersList]?, error: Error?) in
-			guard let userList: UsersList = dictionary?["photo_manifest"] else {
+		fetch(from: url, using: session) { (usersList: UsersList?, error: Error?) in
+			guard let userList: UsersList = usersList else {
 				completion(nil, error)
 				return
 			}
