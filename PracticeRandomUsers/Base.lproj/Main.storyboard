@@ -41,7 +41,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="wj2-Ns-mjs" kind="show" identifier="ShowDetailSegue" id="ArN-fx-P5J"/>
+                                    <segue destination="wj2-Ns-mjs" kind="show" identifier="ShowDetailViewSegue" id="ArN-fx-P5J"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -145,6 +145,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ArN-fx-P5J"/>
+        <segue reference="Hr9-eE-iRQ"/>
     </inferredMetricsTieBreakers>
 </document>

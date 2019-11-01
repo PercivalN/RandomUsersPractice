@@ -15,6 +15,10 @@
 		DD33D97B236CC12B009AA6C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD33D979236CC12B009AA6C8 /* LaunchScreen.storyboard */; };
 		DD33D983236CC657009AA6C8 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33D982236CC657009AA6C8 /* UserDetailViewController.swift */; };
 		DD33D985236CC670009AA6C8 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33D984236CC670009AA6C8 /* UserTableViewController.swift */; };
+		DD33D988236CDD05009AA6C8 /* RandomUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33D987236CDD05009AA6C8 /* RandomUserController.swift */; };
+		DD33D98B236CDD3A009AA6C8 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33D98A236CDD3A009AA6C8 /* Cache.swift */; };
+		DD33D98E236CDD7F009AA6C8 /* RandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33D98D236CDD7F009AA6C8 /* RandomUser.swift */; };
+		DD33D990236CDDB9009AA6C8 /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD33D98F236CDDB9009AA6C8 /* ConcurrentOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		DD33D97C236CC12B009AA6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD33D982236CC657009AA6C8 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		DD33D984236CC670009AA6C8 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		DD33D987236CDD05009AA6C8 /* RandomUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserController.swift; sourceTree = "<group>"; };
+		DD33D98A236CDD3A009AA6C8 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		DD33D98D236CDD7F009AA6C8 /* RandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser.swift; sourceTree = "<group>"; };
+		DD33D98F236CDDB9009AA6C8 /* ConcurrentOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,9 @@
 				DD33D979236CC12B009AA6C8 /* LaunchScreen.storyboard */,
 				DD33D97C236CC12B009AA6C8 /* Info.plist */,
 				DD33D986236CC677009AA6C8 /* View Controllers */,
+				DD33D989236CDD09009AA6C8 /* Model Controllers */,
+				DD33D98C236CDD4B009AA6C8 /* Models */,
+				DD33D98F236CDDB9009AA6C8 /* ConcurrentOperation.swift */,
 			);
 			path = PracticeRandomUsers;
 			sourceTree = "<group>";
@@ -79,6 +90,23 @@
 				DD33D984236CC670009AA6C8 /* UserTableViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DD33D989236CDD09009AA6C8 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD33D987236CDD05009AA6C8 /* RandomUserController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		DD33D98C236CDD4B009AA6C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD33D98A236CDD3A009AA6C8 /* Cache.swift */,
+				DD33D98D236CDD7F009AA6C8 /* RandomUser.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +180,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD33D98B236CDD3A009AA6C8 /* Cache.swift in Sources */,
 				DD33D985236CC670009AA6C8 /* UserTableViewController.swift in Sources */,
 				DD33D973236CC128009AA6C8 /* ViewController.swift in Sources */,
+				DD33D98E236CDD7F009AA6C8 /* RandomUser.swift in Sources */,
+				DD33D990236CDDB9009AA6C8 /* ConcurrentOperation.swift in Sources */,
 				DD33D96F236CC128009AA6C8 /* AppDelegate.swift in Sources */,
 				DD33D983236CC657009AA6C8 /* UserDetailViewController.swift in Sources */,
 				DD33D971236CC128009AA6C8 /* SceneDelegate.swift in Sources */,
+				DD33D988236CDD05009AA6C8 /* RandomUserController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
